@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Minimarket</title>
+  <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Iniciar sesión</h2>
+    <p>Accede con tu usuario y contraseña</p>
+
+    <form onsubmit="return validarLogin();">
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username" placeholder="Tu usuario" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Tu contraseña" required>
+      </div>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <footer>
+      <p>© 2026 Sistema de Gestión de Empleados</p>
+    </footer>
+  </div>
+
+  <script>
+    function validarLogin() {
+      const usuario = document.getElementById("username").value;
+      const clave = document.getElementById("password").value;
+
+      if (usuario === "empleado" && clave === "1234") {
+        window.location.href = "empleados.html"; // redirige si coincide
+        return false;
+      } else {
+        alert("Usuario o contraseña incorrectos");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
