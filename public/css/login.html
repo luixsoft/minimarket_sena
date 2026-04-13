@@ -7,8 +7,8 @@
 </head>
 <body>
   <div class="login-container">
-    <h2>Iniciar sesión</h2>
-    <p>Accede con tu usuario y contraseña</p>
+    <h2>Iniciar sesión minimarket</h2>
+    <p>Acceso empleados con tu usuario y contraseña</p>
 
     <form onsubmit="return validarLogin();">
       <div class="form-group">
@@ -35,7 +35,7 @@
       const clave = document.getElementById("password").value;
 
       if (usuario === "empleado" && clave === "1234") {
-        window.location.href = "empleados.html"; // redirige si coincide
+        window.location.href = "empleados.html"; 
         return false;
       } else {
         alert("Usuario o contraseña incorrectos");
